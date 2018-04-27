@@ -1,0 +1,24 @@
+<div class="container">
+<!-- Property data binding -->
+<div class="row">
+    <div class="col-md-12">
+  Enter Name :  <input [type]="typ" [style.border]="'1px solid red'">
+  </div>
+  </div>
+<div class="row">
+  <input [type]="'button'" [style.width]="'100px'" [style.height]="'30px'" [style.margin]="'17px 0px 17px 88px'">
+</div>
+<div class="row">
+  Password : <input [type]="p">
+</div>
+<!-- interpolation data binding -->
+<div class="row">
+  <h2>You know my {{status}}</h2>
+</div>
+<!-- Event Data Binding -->
+<div class="row">
+  <div class="col-md-12">
+    <input [type]="'button'" class="btn btn-primary" value="Click Me" (click)="click()">
+  </div>
+  </div>
+</div>
