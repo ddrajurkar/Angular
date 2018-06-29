@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { DevComponent } from './dev/dev.component';
 import { InLineDevComponent } from './in-line-dev/in-line-dev.component';
 import { SameFolderCompComponent } from './same-folder-comp.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 @NgModule({
@@ -15,10 +17,11 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
     DevComponent,
     InLineDevComponent,
     SameFolderCompComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

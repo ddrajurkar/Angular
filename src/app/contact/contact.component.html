@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="row"> 
+    <div class="regform">
+    <form role="form" (ngSubmit)="processForm()">
+      <h2>Please Contact Us<small>It's free and always will be.</small></h2>
+      <hr class="colorgraph">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+               <input type="text" name="first_name" id="first_name" class="form-control input-lg" placeholder="First Name" tabindex="1" [(ngModel)]="fname" required #fn="ngModel"> 
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="last_name" id="last_name" class="form-control input-lg" placeholder="Last Name" tabindex="2" [(ngModel)]="lname" required #ln="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="email" id="eml" class="form-control input-lg" placeholder="Email Address" tabindex="1" [(ngModel)]="eml">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group" [ngClass]="{ 'has-error': mobno.invalid && mobno.touched }">
+            <input type="text" name="mobno" id="mob" class="form-control input-lg" placeholder="Mobile No." tabindex="2" [(ngModel)]="contactno" required #mobno="ngModel">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="DOB" id="dob" class="form-control input-lg" placeholder="Date of Birth" tabindex="1" [(ngModel)]="dob">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="age" id="age" class="form-control input-lg" placeholder="Age" tabindex="2" [(ngModel)]="age">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="occupation" id="occ" class="form-control input-lg" placeholder="Occupation" tabindex="1" [(ngModel)]="occ">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="organisation" id="org" class="form-control input-lg" placeholder="organisation" tabindex="2" [(ngModel)]="org">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="location" id="loc" class="form-control input-lg" placeholder="Location" tabindex="1" [(ngModel)]="loc">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="jobrole" id="role" class="form-control input-lg" placeholder="Job Role" tabindex="2" [(ngModel)]="jrole">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="adhar" id="adharId" class="form-control input-lg" placeholder="Aadhar No." tabindex="1" [(ngModel)]="adharid">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="pan" id="panId" class="form-control input-lg" placeholder="Pan No." tabindex="2" [(ngModel)]="panid">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="adrs" id="adr" class="form-control input-lg" placeholder="Address" tabindex="1" [(ngModel)]="adrs">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="text" name="city" id="city" class="form-control input-lg" placeholder="City" tabindex="2" [(ngModel)]="city">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+                        <input type="text" name="pin" id="pcode" class="form-control input-lg" placeholder="PinCode" tabindex="1" [(ngModel)]="pin">
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6">
+          <div class="form-group">
+            <input type="button" value="Upload Photo" class="btn btn-primary btn-block btn-lg" tabindex="2">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-4 col-sm-3 col-md-3">
+          <span class="button-checkbox">
+            <button type="button" class="btn" data-color="info" tabindex="7">I Agree</button>
+                        <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">
+          </span>
+        </div>
+        <div class="col-xs-8 col-sm-9 col-md-9">
+           By clicking <strong class="label label-primary">Save</strong>, you agree to the <a href="#" data-toggle="modal" data-target="#t_and_c_m">Terms and Conditions</a> set out by this site, including our Cookie Use.
+        </div>
+      </div>
+      
+      <hr class="colorgraph">
+      <div class="row">
+        <div class="col-xs-12 col-md-6"><input type="submit" value="Reset" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+        <div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Save &and; Next</a></div>
+      </div>
+    </form>
+  </div>
+</div>
